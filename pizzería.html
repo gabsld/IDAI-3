@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pizza GASL</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="estilos-gasl-pizza.css">
+</head>
+<body>
+
+<img src="pizza.png" alt="pizza img" width="100" height="100">
+<img src="pizza.png" alt="pizza img" width="100" height="100">
+<img src="pizza.png" alt="pizza img" width="100" height="100">
+<img src="pizza.png" alt="pizza img" width="100" height="100">
+<img src="pizza.png" alt="pizza img" width="100" height="100">
+<img src="pizza.png" alt="pizza img" width="100" height="100">
+<img src="pizza.png" alt="pizza img" width="100" height="100">
+<img src="pizza.png" alt="pizza img" width="100" height="100">
+<img src="pizza.png" alt="pizza img" width="100" height="100">
+<img src="pizza.png" alt="pizza img" width="100" height="100">
+<img src="pizza.png" alt="pizza img" width="100" height="100">
+
+<hr style="border: none; height: 2px; background-color: darkred;">
+
+<div class="contenedor">
+  <!-- IZQ -->
+  <div class="columna">
+    <label><strong>CANTIDAD:</strong><input type="number" id="cantidad" min="1" value="1"></label>
+    <hr>
+
+    <h3>TAMAÑO:</h3>
+    <label><input type="radio" name="tamano" value="45" class="opcion-config"> Personal</label>
+    <label><input type="radio" name="tamano" value="90" class="opcion-config"> Chica</label>
+    <label><input type="radio" name="tamano" value="150" class="opcion-config"> Mediana</label>
+    <label><input type="radio" name="tamano" value="250" class="opcion-config"> Familiar</label>
+    <label><input type="radio" name="tamano" value="400" class="opcion-config"> Suprema</label>
+    <hr>
+    <h3>TIPO DE PAN:</h3>
+    <label><input type="radio" name="pan" value="0" class="opcion-config"> Normal</label>
+    <label><input type="radio" name="pan" value="15" class="opcion-config"> Delgada</label>
+    <label><input type="radio" name="pan" value="20" class="opcion-config"> Pan Pizza</label>
+    <label><input type="radio" name="pan" value="30" class="opcion-config"> Hut Cheese</label>
+  </div>
+
+  <!-- CENTRO -->
+  <div class="columna">
+    <h3>INGREDIENTES:</h3>
+    <label><input type="checkbox" value="10" class="opcion-config"> Jamon</label>
+    <label><input type="checkbox" value="15" class="opcion-config"> Peperoni</label>
+    <label><input type="checkbox" value="10" class="opcion-config"> Tocino</label>
+    <label><input type="checkbox" value="15" class="opcion-config"> Champiñones</label>
+    <label><input type="checkbox" value="10" class="opcion-config"> Chorizo Español</label>
+    <label><input type="checkbox" value="5" class="opcion-config"> Piña</label>
+    <label><input type="checkbox" value="15" class="opcion-config"> Salami</label>
+    <label><input type="checkbox" value="5" class="opcion-config"> Aceitunas</label>
+
+    <h3>ESPECIALES:</h3>
+    <select id="especial" class="opcion-config">
+      <option value="59">Margarita</option>
+      <option value="69">4 Quesos</option>
+      <option value="79">Hawaiana</option>
+      <option value="89">Napolitana</option>
+      <option value="99">New York</option>
+    </select>
+
+    <h3>¿Quieres buffet?</h3>
+    <select id="buffet" onchange="alternarOpciones()">
+      <option value="SI">SI</option>
+      <option value="NO" selected>NO</option>
+    </select>
+    <label>Numero de adultos: <input type="number" id="adultos" value="0" min="0"></label>
+    <label>Numero de niños: <input type="number" id="ninos" value="0" min="0"></label>
+  </div>
+
+  <!-- DERECHA -->
+  <div class="columna">
+    <div style="text-align: center;">
+      <img src="pizzerialogo.png" alt="LOGO" height="300" width="300">
+    </div>
+    <h2>TOTAL A PAGAR: <span id="total">$0.00</span></h2>
+    <button onclick="calcularTotal()">Calcular Total</button>
+  </div>
+</div>
+
+<hr style="border: none; height: 2px; background-color: darkred;">
+<img src="pizza.png" width="100" height="100">
+<img src="pizza.png" width="100" height="100">
+<img src="pizza.png" width="100" height="100">
+<img src="pizza.png" width="100" height="100">
+<img src="pizza.png" width="100" height="100">
+<img src="pizza.png" width="100" height="100">
+<img src="pizza.png" width="100" height="100">
+<img src="pizza.png" width="100" height="100">
+<img src="pizza.png" width="100" height="100">
+<img src="pizza.png" width="100" height="100">
+<img src="pizza.png" width="100" height="100">
+
+<!-- Archivo js -->
+<script src="gasl-pizza.js"></script>
+</body>
+</html>
+
+

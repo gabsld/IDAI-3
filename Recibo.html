@@ -29,21 +29,21 @@
         <h1>Recibo Telefonico</h1>
         <label for="" >Minutos de celular (10.00 MXN c/u)</label>
         <br>
-        <input type="number" id="minCel" value="1">
+        <input type="number" id="minCel" value="100">
 
         <hr>
         <label for="">Tipo de Plan</label>
         <br>
-        <input type="radio" name="plan" value="tel">Solo teléfono<br>
-        <input type="radio" name="plan" value="internet">Teléfono + Internet<br>
-        <input type="radio" name="plan" value="tv">Teléfono + Internet + TV<br>
+        <input type="radio" name="plan" value="tel">Solo teléfono (100 MX)<br>
+        <input type="radio" name="plan" value="internet">Teléfono + Internet (200 MX)<br>
+        <input type="radio" name="plan" value="tv">Teléfono + Internet + TV (300 MX)<br>
 
         <hr>
         <label for="">Tipo de Plan</label>
         <br>
-        <input type="checkbox" name="Antivirus">Antivirus<br>
-        <input type="checkbox" name="nube">Serivicio de Nube<br>
-        <input type="checkbox" name="ws">Web Services<br>
+        <input type="checkbox" name="Antivirus">Antivirus (50 MXN)<br>
+        <input type="checkbox" name="nube">Serivicio de Nube (150 MXN)<br>
+        <input type="checkbox" name="ws">Web Services(250 MXN)<br>
 
         <hr>
         <label for="">Paquetes</label>
@@ -71,7 +71,58 @@ var formulario = document.getElementById("calculoMinutos");
 
 function calcular (){
 
-var minCel = formulario.minCel.value
+    var total = 0;
+var minCel = formulario.minCel.value;
+total = minCel*10;
+
+//CONDICONES ANIDADAS
+if(formulario.plan.value == "tel")
+{
+    total = total + 100;
+}
+
+else if (formulario.plan.value == "internet")
+{total = total + 200;}
+
+else if (formulario.plan.value == "tv")
+{
+    total = total + 300;
+}
+
+else{
+    alert("Seleccionar un Tipo de Plan");
+}
+
+//SIMPLES (CHECKBOX)
+
+if (formulario.antivirus.checked) {
+    total = total + 50
+}
+
+if (formulario.nube.checked) {
+    total = total + 150;
+}
+
+if (formulario.ws.checked) {
+    total = total + 250;
+}
+
+
+if(formulario.residencial.select){
+    total = total + 100;
+}
+
+if(formulario.pyme.select){
+    total = total + 400;
+}
+
+if(formulario.empresa.select){
+    total = total + 500;
+}
+
+
+formulario.resultado.value = total;
+
 alert(minCel)
 }
 

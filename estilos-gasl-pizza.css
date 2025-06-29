@@ -1,0 +1,48 @@
+
+    body {
+      background: #ff9011;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: white;
+    }
+
+    .contenedor {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .columna {
+      flex: 1;
+      background: #ff9011;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+      color: darkred;
+    }
+
+    label, select {
+      display: block;
+      margin: 10px 0;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      background: #ffcc00;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #total {
+      color: darkred;
+      font-weight: bold;
+    }
